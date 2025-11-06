@@ -1,0 +1,140 @@
+/* h1{ 
+    ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+h1,
+h4{
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    font-style: italic;
+    font-family:  monospace;
+} */
+ h1{
+  text-align: center;
+ }
+.container {
+  display: flex;
+  justify-content: center;  /* horizontal centering */
+  align-items: center;      /* vertical centering */
+  height: 100vh;            /* full viewport height */
+}
+.title {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+h2{
+    font-style: italic;
+}
+.wiki-image {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  cursor: pointer;
+}
+
+.wiki-image img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+
+.wiki-image:hover img {
+  transform: scale(1.02);
+}
+
+
+.wiki-image .preview {
+  position: absolute;
+  bottom: 10px;               
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.wiki-image:hover .preview {
+  opacity: 1;
+}
+/* video */
+.video-hover {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+.video-hover img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+
+.video-hover iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+
+.video-hover:hover img {
+  opacity: 0; 
+}
+
+.video-hover:hover iframe {
+  opacity: 1; 
+  pointer-events: auto; 
+}
+
+
+.hover-word {
+  position: relative;      /* needed for the image positioning */
+  color: #0645ad;          /* optional: make the word look like a link */
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.hover-word img {
+  position: absolute;
+  top: 120%;               /* below the word */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  opacity: 0;              /* hidden by default */
+  pointer-events: none;    /* so it doesn’t block the hover */
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.hover-word:hover img {
+  opacity: 1;              /* show image when hovering over the word */
+}
+
+
